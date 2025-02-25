@@ -58,6 +58,10 @@ for key, value in date_dict.items():
     if value == user_date:
         keys.append(key)
 
+#Report if no record were found
+if len(keys) == 0:
+    print(f"No records were found on {user_date}")
+
 #Loop through keys and report locations
 for key in keys:
     location = location_dict[key]
